@@ -1,0 +1,7 @@
+##POTD
+s= "geEksforGEeks"
+k=""
+for i in s:
+    if i not in k:
+        k+=i
+print(k)
