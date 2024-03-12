@@ -1,0 +1,36 @@
+    ListNode* removal(ListNode* head,bool &flag)
+    {
+        if(head==NULL)
+        {
+            return head;
+        }
+        ListNode* temp=head;
+        int sum=0;
+        while(temp!=NULL)
+        {
+            sum=sum+temp->val;
+            if(sum==0)
+            {
+                flag=true;
+                return temp->next;
+            }
+            temp=temp->next;
+        }
+        head->next=removal(head->next,flag);
+        return head;
+    }
+    ListNode* removeZeroSumSublists(ListNode* head) {
+        while(1)
+        {
+            bool flag=false;
+            head=removal(head,flag);
+            if(flag==false)
+            {
+                break;
+            }
+           
+        }
+         return head;
+            
+    }
+};
