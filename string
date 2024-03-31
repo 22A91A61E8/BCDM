@@ -1,0 +1,15 @@
+n=3
+l=[1,2,3]
+s=""
+for i in l:
+    s=s+str(i)
+print(s)
+m=int(s)+1
+m=str(m)
+print(m)
+l=[]
+for i in m:
+    l.append(int(i))
+print(l)
+
+    
